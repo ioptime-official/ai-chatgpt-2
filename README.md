@@ -1,7 +1,7 @@
 # ai-chatgpt-2
 ### Introduction
 
-- In this project I have chose medical dataset and GPT2 model for the text genration
+- In this project I have selected medical dataset and GPT2 model for the text genration
 - We provide some text the model on the base of text generate results
 
 ###  Dependencies:
@@ -44,3 +44,12 @@ for i, sample_output in enumerate(sample_outputs):
   result = "{} : {}".format(i, tokenizer.decode(sample_output, skip_special_tokens=True))
 
 ```
+
+├── src
+│   ├── dataset
+│   │   ├── data.csv  
+├── model
+│   ├── pytorch_model.bin
+│   ├── tokenizer.json
+│   ├── merge.txt
+
