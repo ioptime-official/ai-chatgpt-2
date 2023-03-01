@@ -4,9 +4,14 @@
 - In this project I have selected medical dataset and GPT2 model for the text genration
 - We provide some text the model on the base of text generate results
 ### Project Workflow
-<p align="justify">
-Start by collecting the data related to the domain. In this project, we used healthcare-related articles and reports to train a GPT2 generative model.Convert the acquired data to a .csv format and remove any unwanted characters or tags from it.Apply some preprocessing techniques such as removing duplicates and outliers, handling missing data, and adding limits to the maximum number of words in a sentence.Use the Tokenizer class provided by the Hugging Face Transformers library to tokenize the text into subwords. We also apply padding and add special start and end tokens.Load the preprocessed data into PyTorch DataLoader to split it into batches. Use the pre-trained GPT2 model provided by the Transformers library to train on our preprocessed data.After the model training is completed, evaluate the performance of the model by using metrics like loss function and perplexity.Calculate the performance metrics to determine the quality of the model.Finally, use the trained model to generate new text sequences related to the healthcare domain. Download the generated model for future use.
-</p>
+
+- Firstly Start by collecting the data related to the domain. In this project, healthcare-related data and reports [Gather](https://github.com/LasseRegin/medical-question-answer-data.git) to train a GPT2 generative model. 
+- Then acquired data is converted to .csv format and removed any unwanted characters or tags from it.Apply some preprocessing techniques such as removing duplicates and outliers, handling missing data, and adding limits to the maximum number of words in a sentence.
+- Use the Tokenizer class provided by the Hugging Face Transformers library to tokenize the text into subwords. We also apply padding and add special start and end tokens.
+- Load the preprocessed data into PyTorch DataLoader to split it into batches. Use the pre-trained GPT2 model provided by the Transformers library to train on our preprocessed data.
+-dAfter the model training is completed, evaluate the performance of the model by using metrics like loss function and perplexity.Calculate the performance metrics to determine the quality of the model.
+- Finally, use the trained model to generate new text sequences related to the healthcare domain. Download the generated model for future use.
+
 
 ![](https://github.com/ioptime-official/ai-chatgpt-2/blob/main/workflow.jpg)
 
