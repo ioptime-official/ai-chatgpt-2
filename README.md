@@ -5,13 +5,15 @@
 - We provide some text the model on the base of text generate results
 
 ###  Dependencies:
-- Transformer
-- torch
-- numpy 
-- pandas
-- matplotlib
+```
+transformers==4.11.3
+torch==1.9.0
+numpy==1.19.5
+pandas==1.2.4
+matplotlib==3.3.4
+```
 these dependecies can be download by runing given command
-`$ pip install -r requirements.txt`
+`pip install -r requirements.txt`
 
 
 
@@ -44,12 +46,16 @@ for i, sample_output in enumerate(sample_outputs):
   result = "{} : {}".format(i, tokenizer.decode(sample_output, skip_special_tokens=True))
 
 ```
-
+After building the model the folder hierarchy look like.
+```
 ├── src
 │   ├── dataset
-│   │   ├── data.csv  
-├── model
-│   ├── pytorch_model.bin
-│   ├── tokenizer.json
-│   ├── merge.txt
-
+│   │   ├── data.csv
+|   ├── model
+│   |   ├── pytorch_model.bin
+│   |   ├── tokenizer_config.json
+│   |   ├── merge.txt
+│   |   ├── added_tokens.json
+│   |   ├── config.json
+│   |   ├── vocab.json
+```
