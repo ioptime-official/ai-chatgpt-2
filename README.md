@@ -3,6 +3,13 @@
 
 - In this project I have selected medical dataset and GPT2 model for the text genration
 - We provide some text the model on the base of text generate results
+### Project Workflow
+<p align="justify">
+Start by collecting the data related to the domain. In this project, we used healthcare-related articles and reports to train a GPT2 generative model.Convert the acquired data to a .csv format and remove any unwanted characters or tags from it.Apply some preprocessing techniques such as removing duplicates and outliers, handling missing data, and adding limits to the maximum number of words in a sentence.Use the Tokenizer class provided by the Hugging Face Transformers library to tokenize the text into subwords. We also apply padding and add special start and end tokens.Load the preprocessed data into PyTorch DataLoader to split it into batches. Use the pre-trained GPT2 model provided by the Transformers library to train on our preprocessed data.After the model training is completed, evaluate the performance of the model by using metrics like loss function and perplexity.Calculate the performance metrics to determine the quality of the model.Finally, use the trained model to generate new text sequences related to the healthcare domain. Download the generated model for future use.
+</p>
+
+![](https://github.com/ioptime-official/ai-chatgpt-2/blob/main/workflow.jpg)
+
 
 ###  Dependencies:
 ```
@@ -59,3 +66,12 @@ After building the model the folder hierarchy look like.
 │   |   ├── config.json
 │   |   ├── vocab.json
 ```
+### Results:
+I have following results after passing keyword to model
+- Keywords: "symptoms of calcium deficiency"
+> symptoms of calcium deficiency are numerous they include fatigue dizziness irritability weakness fatigue and weakness in addition symptoms appear like flu like symptoms in which someone has a low level of circulating acid and nutrients including vitamin d calcium calcium magnesium and sodium it is important to note calcium is essential for brain growth and joint movement if a person has not exercised regularly enough he or she may suffer from mild to severe weakness
+- Keywords: "causes of lung cancer"
+>  causes of lung cancer vary on a person is known risk factors to their immediate surroundings such as family history of cancer or certain health conditions a person makes an important lifestyle change most changes will be absorbed from their lungs in gradual process and are in good to moderate risk this process helps minimize the possibility for contagious diseases through a smoke or chemical exposure when smoking or environmental exposures like smoke gums or particulates become widespread an immediate medical evaluation such as h pylori positive a team of disease experts has observed that
+
+
+
