@@ -5,12 +5,12 @@
 - We provide some text the model on the base of text generate results
 ### Project Workflow
 
-- Firstly Start by collecting the data related to the domain. In this project, healthcare-related data and reports are gather form [link](https://github.com/LasseRegin/medical-question-answer-data.git).
-- Then the acquired data is converted to .csv format and removed any unwanted characters or tags from it. Afterthat some preprocessing techniques are applied such as removing duplicates and outliers, handling missing data, and adding limits to the maximum number of words in a sentence.
-- In tokenization the Tokenizer class provided by the Hugging Face Transformers library is used to tokenize the text into subwords, Special start and end tokens are also added with padding to complete the tokenization process.
+- Firstly the data is collected related to the domain. In this project, healthcare-related data and reports are gather form [link](https://github.com/LasseRegin/medical-question-answer-data.git).
+- Then the acquired data is converted to .csv format and any unwanted characters or tags are removed from it. After that some preprocessing techniques are applied such as removing duplicates and outliers, handling missing data, and adding limits to the maximum number of words in a sentence.
+- In tokenization, the Tokenizer class provided by the Hugging Face Transformers library is used to tokenize the text into subwords, special start and end tokens are also added with padding to complete the tokenization process.
 - Load the preprocessed data into PyTorch DataLoader to split it into batches. Use the pre-trained GPT2 model provided by the Transformers library to train on the preprocessed data.
-- After the model training is completed, Performance of the model is evaluated by using metrics like loss function and perplexity.
-- Finally, use the trained model is used to generate new text sequences related to the healthcare domain.
+- After the model training is completed, performance of the model is evaluated by using metrics like loss function and perplexity.
+- Finally, the trained model is used to generate new text sequences related to the healthcare domain.
 
 
 ![](https://github.com/ioptime-official/ai-chatgpt-2/blob/main/workflow.jpg)
@@ -30,7 +30,7 @@ these dependecies can be download by runing given command
 
 
 ### Generate sentences!
-After training GPT-2, generate sentences can be generated using the trained model.
+After training GPT-2, sentences can be generated using the trained model.
 ```
 model.eval()
 
@@ -58,7 +58,7 @@ for i, sample_output in enumerate(sample_outputs):
   result = "{} : {}".format(i, tokenizer.decode(sample_output, skip_special_tokens=True))
 
 ```
-After building the model, the following folder hierarchy is created.
+After building and saving model, the following folder hierarchy is created.
 ```
 ├── src
 │   ├── dataset
