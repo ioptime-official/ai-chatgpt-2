@@ -5,12 +5,12 @@
 - We provide some text the model on the base of text generate results
 ### Project Workflow
 
-- Firstly Start by collecting the data related to the domain. In this project, healthcare-related data and reports [Gather](https://github.com/LasseRegin/medical-question-answer-data.git) to train a GPT2 generative model. 
-- Then acquired data is converted to .csv format and removed any unwanted characters or tags from it.Apply some preprocessing techniques such as removing duplicates and outliers, handling missing data, and adding limits to the maximum number of words in a sentence.
-- Use the Tokenizer class provided by the Hugging Face Transformers library to tokenize the text into subwords. We also apply padding and add special start and end tokens.
-- Load the preprocessed data into PyTorch DataLoader to split it into batches. Use the pre-trained GPT2 model provided by the Transformers library to train on our preprocessed data.
--dAfter the model training is completed, evaluate the performance of the model by using metrics like loss function and perplexity.Calculate the performance metrics to determine the quality of the model.
-- Finally, use the trained model to generate new text sequences related to the healthcare domain. Download the generated model for future use.
+- Firstly Start by collecting the data related to the domain. In this project, healthcare-related data and reports are gather form [link](https://github.com/LasseRegin/medical-question-answer-data.git).
+- Then the acquired data is converted to .csv format and removed any unwanted characters or tags from it. Afterthat some preprocessing techniques are applied such as removing duplicates and outliers, handling missing data, and adding limits to the maximum number of words in a sentence.
+- In tokenization the Tokenizer class provided by the Hugging Face Transformers library is used to tokenize the text into subwords, Special start and end tokens are also added with padding to complete the tokenization process.
+- Load the preprocessed data into PyTorch DataLoader to split it into batches. Use the pre-trained GPT2 model provided by the Transformers library to train on the preprocessed data.
+- After the model training is completed, Performance of the model is evaluated by using metrics like loss function and perplexity.
+- Finally, use the trained model is used to generate new text sequences related to the healthcare domain.
 
 
 ![](https://github.com/ioptime-official/ai-chatgpt-2/blob/main/workflow.jpg)
@@ -30,7 +30,7 @@ these dependecies can be download by runing given command
 
 
 ### Generate sentences!
-After training GPT-2, we can generate sentences with our trained model using.
+After training GPT-2, generate sentences can be generated using the trained model.
 ```
 model.eval()
 
@@ -58,7 +58,7 @@ for i, sample_output in enumerate(sample_outputs):
   result = "{} : {}".format(i, tokenizer.decode(sample_output, skip_special_tokens=True))
 
 ```
-After building the model the folder hierarchy look like.
+After building the model, the following folder hierarchy is created.
 ```
 ├── src
 │   ├── dataset
@@ -72,7 +72,7 @@ After building the model the folder hierarchy look like.
 │   |   ├── vocab.json
 ```
 ### Results:
-I have following results after passing keyword to model
+Following results are obtained after passing keywords to the model
 - Keywords: "symptoms of calcium deficiency"
 > symptoms of calcium deficiency are numerous they include fatigue dizziness irritability weakness fatigue and weakness in addition symptoms appear like flu like symptoms in which someone has a low level of circulating acid and nutrients including vitamin d calcium calcium magnesium and sodium it is important to note calcium is essential for brain growth and joint movement if a person has not exercised regularly enough he or she may suffer from mild to severe weakness
 - Keywords: "causes of lung cancer"
