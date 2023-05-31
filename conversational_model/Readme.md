@@ -8,7 +8,7 @@ This repository contains a conversational healthcare dataset used for training a
 - Tokens: 44.53 million
 - Specialties: 96
 
-Data can be install from the [link](https://drive.google.com/drive/folders/17QXf5kyMVdzZSoG6gX9hqSk8IETbbrwe?usp=sharing).
+Data can be downlaoded from this [link](https://drive.google.com/drive/folders/17QXf5kyMVdzZSoG6gX9hqSk8IETbbrwe?usp=sharing).
 
 ### Distributed Training
 The model was trained using a distributed training approach, utilizing 2 devices. The dataset was split and distributed across these devices, enabling parallel training and improving efficiency. Kaggle, a popular platform for data science and machine learning, was utilized for the distribution training process.
